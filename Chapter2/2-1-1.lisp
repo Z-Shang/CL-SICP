@@ -9,7 +9,7 @@
 
 (defun add-rat (x y)
   (make-rat (+ (* (numer x) (denom y))
-               (* (numer y) (denom y)))
+               (* (numer y) (denom x)))
             (* (denom x) (denom y))))
 
 (defun sub-rat (x y)
@@ -23,7 +23,7 @@
 
 (defun div-rat (x y)
   (make-rat (* (numer x) (denom y))
-            (* (denom x) (numer y))))
+            (* (numer y) (denom x))))
 
 (defun equal-rat-p (x y)
   (= (* (numer x) (denom y))
