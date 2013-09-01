@@ -28,3 +28,6 @@
 (defun equal-rat-p (x y)
   (= (* (numer x) (denom y))
      (* (numer y) (denom x))))
+
+(defun print-rat (x)
+  (format *standard-output* "~%~A/~A" (numer x) (denom x)))
