@@ -4,18 +4,21 @@
 (defun make-line (s e)
   (cons s e))
 
-(defun start-seg (x)
-  (car x))
+(defun start-seg (l)
+  (car l))
 
-(defun end-seg (x)
-  (cdr x))
+(defun end-seg (l)
+  (cdr l))
 
-(defun get-x (x)
-  (car x))
+(defun get-x (p)
+  (car p))
 
-(defun get-y (x)
-  (cdr x))
+(defun get-y (p)
+  (cdr p))
 
-(defun mid-point (x)
+(defun mid-point (l)
   (make-point (/ (+ (get-x (end-seg x)) (get-x (start-seg x))) 2)
               (/ (+ (get-y (end-seg x)) (get-y (start-seg x))) 2)))
+
+(defun print-point (p)
+  (format *standard-output* "(~A,~A)~%" (get-x p) (get-y p)))
